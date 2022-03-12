@@ -4,3 +4,6 @@ A Discord.js bot that uses Tatsu's API to auto update in a specific channel.
 `npm i`
 change example.env to .env and fill out the values
 `node .` to run
+
+## Contributors
+[Varnilla](https://github.com/Varnilla)
