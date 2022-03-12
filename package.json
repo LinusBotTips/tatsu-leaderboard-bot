@@ -1,0 +1,24 @@
+{
+  "name": "tatsu-leaderboard-bot",
+  "version": "1.0.0",
+  "description": "A Discord.js bot that uses Tatsu's API to auto update in a specific channel.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LinusBotTips/tatsu-leaderboard-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LinusBotTips/tatsu-leaderboard-bot/issues"
+  },
+  "homepage": "https://github.com/LinusBotTips/tatsu-leaderboard-bot#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "canvas": "^2.9.0",
+    "discord.js": "^13.6.0"
+  }
+}
