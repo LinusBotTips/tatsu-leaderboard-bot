@@ -27,8 +27,8 @@ client.on("ready", () => {
                     const canvas = Canvas.createCanvas(1280, 700)
                     const ctx = canvas.getContext('2d')
                     ctx.drawImage(await Canvas.loadImage('https://cdn.discordapp.com/attachments/950003993239777340/951820776720457778/Untitled2_20220218205227.png'), 0, 0, canvas.width, canvas.height)
-                    ctx.drawImage(await Canvas.loadImage(`.assets/black.png`), 0, 0, canvas.width, canvas.height)
-                    Canvas.registerFont(`.assets/futura-bold.ttf`, { family: "Futura Book" })
+                    ctx.drawImage(await Canvas.loadImage(`./assets/black.png`), 0, 0, canvas.width, canvas.height)
+                    Canvas.registerFont(`./assets/futura-bold.ttf`, { family: "Futura Book" })
 
                     for (i = 0; i < (rank.length > 10 ? 10 : rank.length); i++) {
                         let nick = client.users.cache.get(rank[i].user_id).username
