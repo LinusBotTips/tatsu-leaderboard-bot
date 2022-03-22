@@ -31,7 +31,12 @@ client.on("ready", () => {
                     Canvas.registerFont(`./assets/futura-bold.ttf`, { family: "Futura Book" })
 
                     for (i = 0; i < (rank.length > 10 ? 10 : rank.length); i++) {
-                        let nick = client.users.cache.get(rank[i].user_id).username
+                         let req = await axios.get(`https://discord.com/api/v8/users/${rank[i].user_id}`, {
+                            headers: {
+                                Authorization: `Bot ${client.token}`,
+                            }
+                        })
+                        let nick = req.data.username
                         ctx.fillStyle = i == 0 ? "#ffe000" : i == 1 ? "#C0C0C0" : i == 2 ? "#CD7F32" : "#ffffff"
                         ctx.font = '35px "Futura Book"'
                         ctx.fillText(`#${i + 1} ${nick.length > 10 ? nick.substring(0, 10) + '...' : nick} • ${rank[i].score}`, i > 4 ? 720 : 120, ((i + 1) - (i > 4 ? 5 : 0)) * 100 + 50)
